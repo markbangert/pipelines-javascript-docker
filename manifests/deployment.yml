@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: markbangertpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: markbangertpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: markbangertpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: markbangertpipelinesjavascriptdocker 
+          image: marksarc555.azurecr.io/markbangertpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
